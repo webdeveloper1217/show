@@ -1,0 +1,48 @@
+// sidebar page
+@import "./sidebar";
+
+// category page
+@import "./category";
+
+.leftblog {
+    width: 240px;
+    display: table;
+    float: left;
+    position: relative;
+    z-index: 999;
+}
+
+.leftblog .s-sidebar__trigger {
+    position: absolute;
+    width: 60px;
+    height: 69px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.rigterblog {
+    display: inline-block;
+    width: calc(100% - 260px);
+    margin-left: 240px;
+    height: 100%;
+    min-height: 70px;
+}
+
+@media (min-width: 676px) and (max-width: 1089px) {
+    .rigterblog {
+        display: inline-block;
+        width: calc(100% - 64px);
+        margin-left: 64px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 676px) {
+    .rigterblog {
+        display: inline-block;
+        width: calc(100%);
+        margin-left: 0px;
+        margin-top: 0;
+        height: 100%;
+    }
+}
